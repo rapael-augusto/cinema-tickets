@@ -42,7 +42,7 @@ import Swal from 'sweetalert2';
               <span *ngIf="isLoading">Entrando...</span>
             </button>
           </form>
-          <p class="register">Não tem uma conta?<a href="/" class="register-link">Cadastre-se aqui!</a></p>
+          <p class="register">Não tem uma conta?<a href="/cadastro" class="register-link">Cadastre-se aqui!</a></p>
         </div>
       </div>
     </div>
