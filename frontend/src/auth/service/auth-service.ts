@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+
+    constructor(private router: Router) {}
+
     private apiUrl = 'http://localhost:8080/auth'
     private registerUrl = 'http://localhost:8080/auth/register'
 
@@ -42,6 +46,7 @@ export class AuthService {
 
     logout(): void {
         localStorage.removeItem('token');
+        this.router.navigate(['']);
     }
 
     getToken(): string | null {
